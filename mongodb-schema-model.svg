@@ -1,0 +1,593 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2640 2560" width="2640" height="2560" style="background:#f8fafc; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <pattern id="dot-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#cbd5e1" opacity="0.6"/>
+    </pattern>
+    <filter id="card-shadow" x="-5%" y="-3%" width="110%" height="108%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.06"/>
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Background Grid -->
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+  <rect width="100%" height="100%" fill="url(#dot-grid)"/>
+
+  <!-- Relational Connectors -->
+  <g fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- subjects.teacherId to teachers._id -->
+    <path d="M 430 460 L 700 460 L 700 154 L 960 154" />
+    <!-- users.teacherId to teachers._id -->
+    <path d="M 430 1572 L 720 1572 L 720 154 L 960 154" />
+    <!-- users.studentId to students._id -->
+    <path d="M 430 1544 L 660 1544 L 660 844 L 960 844" />
+  </g>
+  <!-- Connector Dots -->
+  <g fill="#059669" stroke="#ffffff" stroke-width="2">
+    <circle cx="430" cy="460" r="5" />
+    <circle cx="960" cy="154" r="5" />
+    <circle cx="430" cy="1572" r="5" />
+    <circle cx="430" cy="1544" r="5" />
+    <circle cx="960" cy="844" r="5" />
+  </g>
+
+  <!-- Card: subjects -->
+  <g transform="translate(40, 40)" filter="url(#card-shadow)">
+    <!-- Card Background -->
+    <rect width="390" height="562" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    
+    <!-- Card Header -->
+    <path d="M 0 10 Q 0 0 10 0 L 380 0 Q 390 0 390 10 L 390 44 L 0 44 Z" fill="#e6f4ea" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- 6-dot grip icon -->
+    <g fill="#15803d" opacity="0.6" transform="translate(14, 15)">
+      <circle cx="3" cy="4" r="2" />
+      <circle cx="9" cy="4" r="2" />
+      <circle cx="3" cy="10" r="2" />
+      <circle cx="9" cy="10" r="2" />
+    </g>
+    <!-- Title -->
+    <text x="36" y="27" font-size="16" font-weight="700" fill="#14532d" letter-spacing="-0.2">subjects</text>
+
+    <!-- Table Rows -->
+    <g transform="translate(0, 50)">
+      <text x="16" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="700" fill="#0f172a">_id</text>
+      <text x="372" y="18" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">category</text>
+      <text x="372" y="46" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="74" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">classroom</text>
+      <text x="372" y="74" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">code</text>
+      <text x="372" y="102" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="130" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">color</text>
+      <text x="372" y="130" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="158" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">createdAt</text>
+      <text x="372" y="158" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="186" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">enrolledCount</text>
+      <text x="372" y="186" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="214" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">grade</text>
+      <text x="372" y="214" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="242" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">icon</text>
+      <text x="372" y="242" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="270" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">maxCapacity</text>
+      <text x="372" y="270" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="298" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">name</text>
+      <text x="372" y="298" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="326" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">section</text>
+      <text x="372" y="326" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="354" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">specialty</text>
+      <text x="372" y="354" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="382" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">status</text>
+      <text x="372" y="382" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="410" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">teacherId</text>
+      <text x="372" y="410" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="438" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">teacherName</text>
+      <text x="372" y="438" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="466" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">updatedAt</text>
+      <text x="372" y="466" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="494" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">weeklyHours</text>
+      <text x="372" y="494" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+    </g>
+  </g>
+
+  <!-- Card: grade_subjects -->
+  <g transform="translate(1460, 40)" filter="url(#card-shadow)">
+    <!-- Card Background -->
+    <rect width="350" height="198" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    
+    <!-- Card Header -->
+    <path d="M 0 10 Q 0 0 10 0 L 340 0 Q 350 0 350 10 L 350 44 L 0 44 Z" fill="#e6f4ea" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- 6-dot grip icon -->
+    <g fill="#15803d" opacity="0.6" transform="translate(14, 15)">
+      <circle cx="3" cy="4" r="2" />
+      <circle cx="9" cy="4" r="2" />
+      <circle cx="3" cy="10" r="2" />
+      <circle cx="9" cy="10" r="2" />
+    </g>
+    <!-- Title -->
+    <text x="36" y="27" font-size="16" font-weight="700" fill="#14532d" letter-spacing="-0.2">grade_subjects</text>
+
+    <!-- Table Rows -->
+    <g transform="translate(0, 50)">
+      <text x="16" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="700" fill="#0f172a">_id</text>
+      <text x="332" y="18" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">createdAt</text>
+      <text x="332" y="46" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="74" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">grade</text>
+      <text x="332" y="74" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">subjectId</text>
+      <text x="332" y="102" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="130" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">updatedAt</text>
+      <text x="332" y="130" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+    </g>
+  </g>
+
+  <!-- Card: grade_sections -->
+  <g transform="translate(1840, 40)" filter="url(#card-shadow)">
+    <!-- Card Background -->
+    <rect width="350" height="366" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    
+    <!-- Card Header -->
+    <path d="M 0 10 Q 0 0 10 0 L 340 0 Q 350 0 350 10 L 350 44 L 0 44 Z" fill="#e6f4ea" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- 6-dot grip icon -->
+    <g fill="#15803d" opacity="0.6" transform="translate(14, 15)">
+      <circle cx="3" cy="4" r="2" />
+      <circle cx="9" cy="4" r="2" />
+      <circle cx="3" cy="10" r="2" />
+      <circle cx="9" cy="10" r="2" />
+    </g>
+    <!-- Title -->
+    <text x="36" y="27" font-size="16" font-weight="700" fill="#14532d" letter-spacing="-0.2">grade_sections</text>
+
+    <!-- Table Rows -->
+    <g transform="translate(0, 50)">
+      <text x="16" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="700" fill="#0f172a">_id</text>
+      <text x="332" y="18" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">assignedSubjects</text>
+      <text x="332" y="46" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="74" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">classroom</text>
+      <text x="332" y="74" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">createdAt</text>
+      <text x="332" y="102" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="130" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">grade</text>
+      <text x="332" y="130" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="158" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">maxCapacity</text>
+      <text x="332" y="158" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="186" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">section</text>
+      <text x="332" y="186" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="214" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">shift</text>
+      <text x="332" y="214" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="242" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">status</text>
+      <text x="332" y="242" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="270" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">updatedAt</text>
+      <text x="332" y="270" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="298" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">weeklyHours</text>
+      <text x="332" y="298" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+    </g>
+  </g>
+
+  <!-- Card: profiles -->
+  <g transform="translate(2220, 40)" filter="url(#card-shadow)">
+    <!-- Card Background -->
+    <rect width="360" height="366" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    
+    <!-- Card Header -->
+    <path d="M 0 10 Q 0 0 10 0 L 350 0 Q 360 0 360 10 L 360 44 L 0 44 Z" fill="#e6f4ea" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- 6-dot grip icon -->
+    <g fill="#15803d" opacity="0.6" transform="translate(14, 15)">
+      <circle cx="3" cy="4" r="2" />
+      <circle cx="9" cy="4" r="2" />
+      <circle cx="3" cy="10" r="2" />
+      <circle cx="9" cy="10" r="2" />
+    </g>
+    <!-- Title -->
+    <text x="36" y="27" font-size="16" font-weight="700" fill="#14532d" letter-spacing="-0.2">profiles</text>
+
+    <!-- Table Rows -->
+    <g transform="translate(0, 50)">
+      <text x="16" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="700" fill="#0f172a">_id</text>
+      <text x="342" y="18" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">colorClass</text>
+      <text x="342" y="46" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="74" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">createdAt</text>
+      <text x="342" y="74" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">description</text>
+      <text x="342" y="102" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="130" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">icon</text>
+      <text x="342" y="130" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="158" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">isSystem</text>
+      <text x="342" y="158" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">bool</text>
+      <text x="16" y="186" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">name</text>
+      <text x="342" y="186" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="214" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">options</text>
+      <text x="342" y="214" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="700" fill="#0284c7">[]</text>
+      <rect x="16" y="226" width="328" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="226" x2="28" y2="252" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="242" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">level</text>
+      <text x="342" y="242" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <rect x="16" y="254" width="328" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="254" x2="28" y2="280" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="270" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">optionKey</text>
+      <text x="342" y="270" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="298" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">updatedAt</text>
+      <text x="342" y="298" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+    </g>
+  </g>
+
+  <!-- Card: teachers -->
+  <g transform="translate(960, 110)" filter="url(#card-shadow)">
+    <!-- Card Background -->
+    <rect width="420" height="618" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    
+    <!-- Card Header -->
+    <path d="M 0 10 Q 0 0 10 0 L 410 0 Q 420 0 420 10 L 420 44 L 0 44 Z" fill="#e6f4ea" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- 6-dot grip icon -->
+    <g fill="#15803d" opacity="0.6" transform="translate(14, 15)">
+      <circle cx="3" cy="4" r="2" />
+      <circle cx="9" cy="4" r="2" />
+      <circle cx="3" cy="10" r="2" />
+      <circle cx="9" cy="10" r="2" />
+    </g>
+    <!-- Title -->
+    <text x="36" y="27" font-size="16" font-weight="700" fill="#14532d" letter-spacing="-0.2">teachers</text>
+
+    <!-- Table Rows -->
+    <g transform="translate(0, 50)">
+      <text x="16" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="700" fill="#0f172a">_id</text>
+      <text x="402" y="18" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">academicDegree</text>
+      <text x="402" y="46" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="74" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">assignedHours</text>
+      <text x="402" y="74" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">assignments</text>
+      <text x="402" y="102" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="700" fill="#0284c7">[]</text>
+      <rect x="16" y="114" width="388" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="114" x2="28" y2="140" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="130" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">grade</text>
+      <text x="402" y="130" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <rect x="16" y="142" width="388" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="142" x2="28" y2="168" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="158" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">section</text>
+      <text x="402" y="158" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <rect x="16" y="170" width="388" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="170" x2="28" y2="196" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="186" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">subjectId</text>
+      <text x="402" y="186" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <rect x="16" y="198" width="388" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="198" x2="28" y2="224" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="214" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">subjectName</text>
+      <text x="402" y="214" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <rect x="16" y="226" width="388" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="226" x2="28" y2="252" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="242" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">weeklyHours</text>
+      <text x="402" y="242" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="270" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">contractHours</text>
+      <text x="402" y="270" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="298" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">createdAt</text>
+      <text x="402" y="298" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="326" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">dni</text>
+      <text x="402" y="326" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="354" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">email</text>
+      <text x="402" y="354" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="382" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">firstName</text>
+      <text x="402" y="382" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="410" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">fullName</text>
+      <text x="402" y="410" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="438" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">lastName</text>
+      <text x="402" y="438" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="466" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">phone</text>
+      <text x="402" y="466" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="494" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">specialty</text>
+      <text x="402" y="494" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="522" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">status</text>
+      <text x="402" y="522" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="550" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">updatedAt</text>
+      <text x="402" y="550" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+    </g>
+  </g>
+
+  <!-- Card: students -->
+  <g transform="translate(960, 800)" filter="url(#card-shadow)">
+    <!-- Card Background -->
+    <rect width="420" height="730" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    
+    <!-- Card Header -->
+    <path d="M 0 10 Q 0 0 10 0 L 410 0 Q 420 0 420 10 L 420 44 L 0 44 Z" fill="#e6f4ea" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- 6-dot grip icon -->
+    <g fill="#15803d" opacity="0.6" transform="translate(14, 15)">
+      <circle cx="3" cy="4" r="2" />
+      <circle cx="9" cy="4" r="2" />
+      <circle cx="3" cy="10" r="2" />
+      <circle cx="9" cy="10" r="2" />
+    </g>
+    <!-- Title -->
+    <text x="36" y="27" font-size="16" font-weight="700" fill="#14532d" letter-spacing="-0.2">students</text>
+
+    <!-- Table Rows -->
+    <g transform="translate(0, 50)">
+      <text x="16" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="700" fill="#0f172a">_id</text>
+      <text x="402" y="18" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">averageGrade</text>
+      <text x="402" y="46" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">(mixed)</text>
+      <text x="16" y="74" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">birthDate</text>
+      <text x="402" y="74" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">classroom</text>
+      <text x="402" y="102" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="130" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">createdAt</text>
+      <text x="402" y="130" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="158" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">dni</text>
+      <text x="402" y="158" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="186" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">email</text>
+      <text x="402" y="186" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="214" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">emergencyContacts</text>
+      <text x="402" y="214" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="700" fill="#0284c7">[]</text>
+      <rect x="16" y="226" width="388" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="226" x2="28" y2="252" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="242" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">email</text>
+      <text x="402" y="242" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <rect x="16" y="254" width="388" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="254" x2="28" y2="280" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="270" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">isMainGuardian</text>
+      <text x="402" y="270" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">bool</text>
+      <rect x="16" y="282" width="388" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="282" x2="28" y2="308" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="298" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">name</text>
+      <text x="402" y="298" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <rect x="16" y="310" width="388" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="310" x2="28" y2="336" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="326" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">phone</text>
+      <text x="402" y="326" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <rect x="16" y="338" width="388" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="338" x2="28" y2="364" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="354" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">relationship</text>
+      <text x="402" y="354" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="382" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">enrollmentStatus</text>
+      <text x="402" y="382" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="410" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">firstName</text>
+      <text x="402" y="410" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="438" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">gender</text>
+      <text x="402" y="438" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="466" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">grade</text>
+      <text x="402" y="466" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="494" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">lastName</text>
+      <text x="402" y="494" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="522" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">phone</text>
+      <text x="402" y="522" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="550" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">section</text>
+      <text x="402" y="550" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="578" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">shift</text>
+      <text x="402" y="578" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="606" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">status</text>
+      <text x="402" y="606" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="634" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">studentCode</text>
+      <text x="402" y="634" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="662" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">updatedAt</text>
+      <text x="402" y="662" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+    </g>
+  </g>
+
+  <!-- Card: users -->
+  <g transform="translate(40, 1180)" filter="url(#card-shadow)">
+    <!-- Card Background -->
+    <rect width="390" height="506" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    
+    <!-- Card Header -->
+    <path d="M 0 10 Q 0 0 10 0 L 380 0 Q 390 0 390 10 L 390 44 L 0 44 Z" fill="#e6f4ea" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- 6-dot grip icon -->
+    <g fill="#15803d" opacity="0.6" transform="translate(14, 15)">
+      <circle cx="3" cy="4" r="2" />
+      <circle cx="9" cy="4" r="2" />
+      <circle cx="3" cy="10" r="2" />
+      <circle cx="9" cy="10" r="2" />
+    </g>
+    <!-- Title -->
+    <text x="36" y="27" font-size="16" font-weight="700" fill="#14532d" letter-spacing="-0.2">users</text>
+
+    <!-- Table Rows -->
+    <g transform="translate(0, 50)">
+      <text x="16" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="700" fill="#0f172a">_id</text>
+      <text x="372" y="18" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">avatarUrl</text>
+      <text x="372" y="46" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="74" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">cargo</text>
+      <text x="372" y="74" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">createdAt</text>
+      <text x="372" y="102" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="130" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">dni</text>
+      <text x="372" y="130" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="158" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">email</text>
+      <text x="372" y="158" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="186" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">isActive</text>
+      <text x="372" y="186" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">bool</text>
+      <text x="16" y="214" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">name</text>
+      <text x="372" y="214" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="242" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">password</text>
+      <text x="372" y="242" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="270" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">profileId</text>
+      <text x="372" y="270" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="298" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">role</text>
+      <text x="372" y="298" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="326" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">specialty</text>
+      <text x="372" y="326" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="354" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">studentId</text>
+      <text x="372" y="354" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="382" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">teacherId</text>
+      <text x="372" y="382" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="410" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">updatedAt</text>
+      <text x="372" y="410" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="438" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">webAccess</text>
+      <text x="372" y="438" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">bool</text>
+    </g>
+  </g>
+
+  <!-- Card: grades -->
+  <g transform="translate(40, 1820)" filter="url(#card-shadow)">
+    <!-- Card Background -->
+    <rect width="390" height="394" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    
+    <!-- Card Header -->
+    <path d="M 0 10 Q 0 0 10 0 L 380 0 Q 390 0 390 10 L 390 44 L 0 44 Z" fill="#e6f4ea" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- 6-dot grip icon -->
+    <g fill="#15803d" opacity="0.6" transform="translate(14, 15)">
+      <circle cx="3" cy="4" r="2" />
+      <circle cx="9" cy="4" r="2" />
+      <circle cx="3" cy="10" r="2" />
+      <circle cx="9" cy="10" r="2" />
+    </g>
+    <!-- Title -->
+    <text x="36" y="27" font-size="16" font-weight="700" fill="#14532d" letter-spacing="-0.2">grades</text>
+
+    <!-- Table Rows -->
+    <g transform="translate(0, 50)">
+      <text x="16" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="700" fill="#0f172a">_id</text>
+      <text x="372" y="18" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">academicYearId</text>
+      <text x="372" y="46" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="74" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">bimester1</text>
+      <text x="372" y="74" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">bimester2</text>
+      <text x="372" y="102" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="130" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">bimester3</text>
+      <text x="372" y="130" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="158" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">bimester4</text>
+      <text x="372" y="158" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">null</text>
+      <text x="16" y="186" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">createdAt</text>
+      <text x="372" y="186" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="214" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">finalAverage</text>
+      <text x="372" y="214" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="242" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">isPassing</text>
+      <text x="372" y="242" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">bool</text>
+      <text x="16" y="270" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">studentId</text>
+      <text x="372" y="270" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="298" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">subjectId</text>
+      <text x="372" y="298" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="326" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">updatedAt</text>
+      <text x="372" y="326" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+    </g>
+  </g>
+
+  <!-- Card: academic_years -->
+  <g transform="translate(470, 1820)" filter="url(#card-shadow)">
+    <!-- Card Background -->
+    <rect width="390" height="450" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    
+    <!-- Card Header -->
+    <path d="M 0 10 Q 0 0 10 0 L 380 0 Q 390 0 390 10 L 390 44 L 0 44 Z" fill="#e6f4ea" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- 6-dot grip icon -->
+    <g fill="#15803d" opacity="0.6" transform="translate(14, 15)">
+      <circle cx="3" cy="4" r="2" />
+      <circle cx="9" cy="4" r="2" />
+      <circle cx="3" cy="10" r="2" />
+      <circle cx="9" cy="10" r="2" />
+    </g>
+    <!-- Title -->
+    <text x="36" y="27" font-size="16" font-weight="700" fill="#14532d" letter-spacing="-0.2">academic_years</text>
+
+    <!-- Table Rows -->
+    <g transform="translate(0, 50)">
+      <text x="16" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="700" fill="#0f172a">_id</text>
+      <text x="372" y="18" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">bimesters</text>
+      <text x="372" y="46" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="700" fill="#0284c7">[]</text>
+      <rect x="16" y="58" width="358" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="58" x2="28" y2="84" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="74" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">_id</text>
+      <text x="372" y="74" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <rect x="16" y="86" width="358" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="86" x2="28" y2="112" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">endsAt</text>
+      <text x="372" y="102" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <rect x="16" y="114" width="358" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="114" x2="28" y2="140" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="130" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">isOpen</text>
+      <text x="372" y="130" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">bool</text>
+      <rect x="16" y="142" width="358" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="142" x2="28" y2="168" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="158" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">number</text>
+      <text x="372" y="158" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <rect x="16" y="170" width="358" height="26" rx="4" fill="#f8fafc" />
+      <line x1="28" y1="170" x2="28" y2="196" stroke="#cbd5e1" stroke-width="2" />
+      <text x="38" y="186" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#475569">startsAt</text>
+      <text x="372" y="186" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="214" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">createdAt</text>
+      <text x="372" y="214" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="242" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">endsAt</text>
+      <text x="372" y="242" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="270" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">isActive</text>
+      <text x="372" y="270" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">bool</text>
+      <text x="16" y="298" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">name</text>
+      <text x="372" y="298" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="326" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">startsAt</text>
+      <text x="372" y="326" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="354" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">updatedAt</text>
+      <text x="372" y="354" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="382" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">year</text>
+      <text x="372" y="382" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+    </g>
+  </g>
+
+  <!-- Card: school_settings -->
+  <g transform="translate(910, 1820)" filter="url(#card-shadow)">
+    <!-- Card Background -->
+    <rect width="470" height="674" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    
+    <!-- Card Header -->
+    <path d="M 0 10 Q 0 0 10 0 L 460 0 Q 470 0 470 10 L 470 44 L 0 44 Z" fill="#e6f4ea" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- 6-dot grip icon -->
+    <g fill="#15803d" opacity="0.6" transform="translate(14, 15)">
+      <circle cx="3" cy="4" r="2" />
+      <circle cx="9" cy="4" r="2" />
+      <circle cx="3" cy="10" r="2" />
+      <circle cx="9" cy="10" r="2" />
+    </g>
+    <!-- Title -->
+    <text x="36" y="27" font-size="16" font-weight="700" fill="#14532d" letter-spacing="-0.2">school_settings</text>
+
+    <!-- Table Rows -->
+    <g transform="translate(0, 50)">
+      <text x="16" y="18" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="700" fill="#0f172a">_id</text>
+      <text x="452" y="18" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="46" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">academicCycle</text>
+      <text x="452" y="46" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="74" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">address</text>
+      <text x="452" y="74" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">annexCode</text>
+      <text x="452" y="102" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="130" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">bimestersCount</text>
+      <text x="452" y="130" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="158" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">createdAt</text>
+      <text x="452" y="158" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="186" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">currency</text>
+      <text x="452" y="186" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="214" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">currencySymbol</text>
+      <text x="452" y="214" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="242" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">educationalLevel</text>
+      <text x="452" y="242" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="270" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">maxWeeklyHours</text>
+      <text x="452" y="270" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="298" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">minAttendancePercent</text>
+      <text x="452" y="298" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="326" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">modularCode</text>
+      <text x="452" y="326" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="354" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">officialEmail</text>
+      <text x="452" y="354" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="382" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">passingScore</text>
+      <text x="452" y="382" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">int</text>
+      <text x="16" y="410" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">phone</text>
+      <text x="452" y="410" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="438" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">principalName</text>
+      <text x="452" y="438" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="466" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">schoolDre</text>
+      <text x="452" y="466" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="494" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">schoolName</text>
+      <text x="452" y="494" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="522" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">schoolUgel</text>
+      <text x="452" y="522" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="550" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">timezone</text>
+      <text x="452" y="550" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+      <text x="16" y="578" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">updatedAt</text>
+      <text x="452" y="578" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">date</text>
+      <text x="16" y="606" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="500" fill="#1e293b">website</text>
+      <text x="452" y="606" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="400" fill="#64748b">string</text>
+    </g>
+  </g>
+</svg>
